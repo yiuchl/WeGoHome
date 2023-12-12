@@ -1,0 +1,111 @@
+html {
+	box-sizing: content-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: whitesmoke;
+	color: #2d3033;
+}
+
+/* Basic */
+::selection {
+	color: orangered;
+	background: transparent;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0rem;
+	position: relative;
+	height: 100vh;
+}
+
+/* top navigation bar */
+.topnav {
+	overflow: hidden;
+	/* background-color: whitesmoke; */
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 1rem;
+}
+
+.flex-parent {
+	display: flex;
+	width: 100vw;
+	height: 40vh;
+	overflow-x: scroll;
+}
+
+/* give each img own item */
+.flex-item {
+	flex: 1;
+	position: relative;
+}
+
+.body-text {
+	position: absolute;
+	hyphens: auto;
+	top: 0%;
+	left: 0%;
+	z-index: 4;
+	transition: all 2ms;
+	opacity: 0;
+	padding: 1.5em;
+	pointer-events: none;
+}
+
+img {
+	position: relative;
+	background: blue;
+	vertical-align: top;
+	max-height: 100%;
+	transition: all 1.5ms;
+	filter: grayscale(1);
+	z-index: 5;
+}
+
+/* two images side by side one is normal a one is halftone b
+halftone neighoboring the original and positioned like the body text but top and left both 0,
+and switch opacity from 0 to 1
+
+tl0 
+*/
+
+img:hover {
+	z-index: 3;
+	filter: grayscale(0);
+	opacity: 50%;
+	/* should blur and separate it all individually */
+}
+
+/* > child; + neighbor is the "body-text" after "img" on the same tab */
+
+img:hover + .body-text {
+	opacity: 1;
+}
+
+/* Footer for the main page fruitbythefoot */
+#footer-main {
+	position: static;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+	color: #2d3033;
+	z-index: 0;
+	font-size: 1rem;
+	z-index: 5;
+}
+
+@media (max-width: 400px) {
+	.flex-grid {
+		display: block;
+	}
+}
+
+/* within each flex item position text relatively(?) img within div but the text can slide underneath 
+z-index image higher than text and then reverse the z-index on hover*/
