@@ -29,6 +29,7 @@ body {
 	/* background-color: whitesmoke; */
 	display: flex;
 	justify-content: space-evenly;
+	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
 
