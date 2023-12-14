@@ -29,7 +29,7 @@ body {
 	/* background-color: whitesmoke; */
 	display: flex;
 	justify-content: space-evenly;
-	padding-top: 1rem;
+	padding-top: 1.25rem;
 	padding-bottom: 1rem;
 }
 
@@ -94,7 +94,8 @@ tl0
 img:hover {
 	z-index: 3;
 	filter: grayscale(0);
-	opacity: 50%;
+	opacity: 60%;
+	/* filter: blur(1px); */
 	/* should blur and separate it all individually */
 }
 
