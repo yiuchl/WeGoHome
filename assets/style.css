@@ -124,6 +124,11 @@ img:hover + .body-text {
 		margin: 0;
 		padding: 1rem;
 	}
+
+	.flex-item {
+		top: 0%;
+		left: 0%;
+	}
 }
 
 /* within each flex item position text relatively(?) img within div but the text can slide underneath 
