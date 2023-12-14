@@ -4,7 +4,7 @@ html {
 
 body {
 	width: 100vw;
-	height: 100vh;
+	/* height: 100vh; */
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	background-color: whitesmoke;
 	color: #2d3033;
@@ -38,17 +38,33 @@ body {
 	width: 100vw;
 	height: 40vh;
 	overflow-x: scroll;
+	scrollbar-gutter: stable both-edges;
 }
 
 /* give each img own item */
 .flex-item {
 	flex: 1;
+	/* trying to combat the weird spacing on safari */
 	position: relative;
 }
+
+/* <div class="main-container"> // flex-direction: column;
+    <div class="fixed-container">Fixed Container</div> // height: 100px;
+    <div class="content-wrapper"> // min-height: 0; goes here
+      <div class="overflow-container">
+        <div class="overflow-content">
+        	Content
+        </div>
+      </div>
+    </div>
+  </div> */
 
 .body-text {
 	position: absolute;
 	hyphens: auto;
+	text-wrap: balance;
+	text-align: start;
+	width: 100%;
 	top: 0%;
 	left: 0%;
 	z-index: 4;
@@ -90,14 +106,13 @@ img:hover + .body-text {
 
 /* Footer for the main page fruitbythefoot */
 #footer-main {
-	position: static;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
 	margin: 0;
 	padding: 1rem;
 	color: #2d3033;
-	z-index: 0;
 	font-size: 1rem;
 	z-index: 5;
 }
@@ -105,6 +120,8 @@ img:hover + .body-text {
 @media (max-width: 400px) {
 	.flex-grid {
 		display: block;
+		margin: 0;
+		padding: 1rem;
 	}
 }
 
