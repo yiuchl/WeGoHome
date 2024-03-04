@@ -1,5 +1,6 @@
 html {
 	box-sizing: content-box;
+	scrollbar-width: none;
 }
 
 body {
@@ -11,10 +12,25 @@ body {
 	/* hide scrollbar in different browsers*/
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
 	display: none;
+	background: transparent;
+	width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	width: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	width: 0px;
+	background: transparent;
+	border-radius: 0;
 }
 
 /* Basic */
@@ -45,7 +61,7 @@ body::-webkit-scrollbar {
 	width: 100vw;
 	height: 40vh;
 	overflow-x: scroll;
-	scrollbar-gutter: stable both-edges;
+	/* scrollbar-gutter: stable both-edges; */
 }
 
 /* give each img own item */
