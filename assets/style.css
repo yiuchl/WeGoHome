@@ -8,6 +8,13 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	background-color: whitesmoke;
 	color: #2d3033;
+	/* hide scrollbar in different browsers*/
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 /* Basic */
