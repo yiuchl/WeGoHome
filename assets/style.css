@@ -154,5 +154,38 @@ img:hover + .body-text {
 	}
 }
 
+.disclaimer {
+	display: none;
+}
+
 /* within each flex item position text relatively(?) img within div but the text can slide underneath 
 z-index image higher than text and then reverse the z-index on hover*/
+
+@media only screen and (max-width: 600px) {
+	body {
+		background-color: black;
+		color: whitesmoke;
+	}
+
+	.topnav {
+		color: black;
+	}
+
+	.wrapper {
+		display: none;
+	}
+
+	#footer-main {
+		color: black;
+	}
+
+	.disclaimer {
+		display: contents;
+		text-align: center;
+	}
+
+	.disclaimer-p {
+		margin-top: 2rem;
+		padding: 5rem;
+	}
+}
